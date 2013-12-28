@@ -25,6 +25,7 @@ namespace SeleniumRemoteControlMsTest
         private ISelenium selenium;
         private StringBuilder verificationErrors;
 
+        //Constructor
         public SeleniumMsTestLiveAccountLogin()
         {
             selenium = new DefaultSelenium("10.33.55.72", 4444, "*chrome", "https://login.live.com/");
