@@ -16,7 +16,7 @@ namespace SeleniumTests
         [SetUp]
         public void SetupTest()
         {
-            selenium = new DefaultSelenium("10.33.55.72", 4444, "*chrome", "https://login.live.com/");
+            selenium = new DefaultSelenium("localhost", 4444, "*chrome", "https://login.live.com/");
             selenium.Start();
             verificationErrors = new StringBuilder();
         }

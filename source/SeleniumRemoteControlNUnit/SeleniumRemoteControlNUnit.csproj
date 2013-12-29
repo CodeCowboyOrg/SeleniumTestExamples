@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SeleniumRemoteControl</RootNamespace>
-    <AssemblyName>SeleniumRemoteControl</AssemblyName>
+    <AssemblyName>SeleniumAutomatedTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -68,7 +68,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SeleniumGoogleMapsWebDriverChrome.cs" />
+    <Compile Include="SeleniumGoogleMapsWebDriverIE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeleniumGoogleMapsRemoteControl.cs" />
+    <Compile Include="SeleniumGoogleMapsWebDriverFireFox.cs" />
     <Compile Include="SeleniumNunitLiveAccountLogin.cs" />
   </ItemGroup>
   <ItemGroup>
