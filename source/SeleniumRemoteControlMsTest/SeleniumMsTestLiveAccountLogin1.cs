@@ -19,36 +19,49 @@ namespace SeleniumRemoteControlMsTest
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class SeleniumMsTestLiveAccountLogin
+    public class SeleniumMsTestLiveAccountLogin1
     {
 
         private ISelenium selenium;
         private StringBuilder verificationErrors;
 
         //Constructor
-        public SeleniumMsTestLiveAccountLogin()
+        public SeleniumMsTestLiveAccountLogin1()
         {
-            selenium = new DefaultSelenium("10.33.55.72", 4444, "*chrome", "https://login.live.com/");
+            selenium = new DefaultSelenium("localhost", 4444, "*chrome", "https://login.live.com/");
             selenium.Start();
+            selenium.SetSpeed("800");
             verificationErrors = new StringBuilder();
 
         }
 
         [TestMethod]
-        public void TestLiveLogin()
+        public void TestLiveLogin1()
         {
-            selenium.Open("/login.srf?wa=wsignin1.0&rpsnv=12&ct=1388204572&rver=6.4.6456.0&wp=MBI&wreply=http:%2F%2Fmail.live.com%2Fdefault.aspx&lc=1033&id=64855&mkt=en-us&cbcxt=mai&snsc=1");
-            selenium.WindowMaximize();
-            selenium.Type("id=i0116", "SomeEmail@live.com");
-            selenium.Type("id=i0118", "SomePassword");
-            selenium.Click("id=idSIButton9");
-            selenium.WaitForPageToLoad("30000");
-            Thread.Sleep(3000);
-            selenium.Click("id=c_meun");
-            Thread.Sleep(3000);
-            selenium.Click("id=c_signout");
-            selenium.WaitForPageToLoad("30000");
-            Thread.Sleep(3000);
+            try
+            {
+                selenium.Open("/login.srf?wa=wsignin1.0&rpsnv=12&ct=1388204572&rver=6.4.6456.0&wp=MBI&wreply=http:%2F%2Fmail.live.com%2Fdefault.aspx&lc=1033&id=64855&mkt=en-us&cbcxt=mai&snsc=1");
+                selenium.WindowMaximize();
+                selenium.Type("id=i0116", "SomeUser@live.com");
+                selenium.Type("id=i0118", "SomePassword");
+                selenium.Click("id=idSIButton9");
+                selenium.WaitForPageToLoad("30000");
+                Thread.Sleep(3000);
+                selenium.Click("id=c_meun");
+                Thread.Sleep(3000);
+                selenium.Click("id=c_signout");
+                selenium.WaitForPageToLoad("30000");
+                Thread.Sleep(3000);
+            }
+            finally
+            {
+                if (selenium != null)
+                {
+                    selenium.Close();
+                    selenium.Stop();
+                }
+                selenium = null;
+            }
         }
 
         #region Additional test attributes

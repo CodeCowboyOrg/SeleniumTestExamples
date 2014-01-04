@@ -68,7 +68,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SeleniumMsTestLiveAccountLogin.cs" />
+    <Compile Include="SeleniumMsTestLiveAccountLogin2.cs" />
+    <Compile Include="SeleniumMsTestLiveAccountLogin1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
