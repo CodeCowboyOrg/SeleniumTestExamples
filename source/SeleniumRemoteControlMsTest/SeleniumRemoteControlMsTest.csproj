@@ -68,6 +68,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SeleniumWebDriverJQuery.cs" />
     <Compile Include="SeleniumMsTestLiveAccountLogin2.cs" />
     <Compile Include="SeleniumMsTestLiveAccountLogin1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
