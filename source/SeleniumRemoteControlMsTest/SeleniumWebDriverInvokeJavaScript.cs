@@ -24,7 +24,7 @@ namespace SeleniumWebDriver
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class SeleniumWebDriverJQuery
+    public class SeleniumWebDriverInvokeJavaScript
     {
 
         private IWebDriver driver;
@@ -33,7 +33,7 @@ namespace SeleniumWebDriver
         private bool acceptNextAlert = true;
 
 
-        public SeleniumWebDriverJQuery()
+        public SeleniumWebDriverInvokeJavaScript()
         {
         }
 
